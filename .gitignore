@@ -22,4 +22,7 @@ tmux/plugins/*
 # doom emacs
 doom/doom
 
+# wireshark
+wireshark/
+
 **/*.rdb

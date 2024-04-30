@@ -102,7 +102,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # -------------------------------------------- variables ------------------------------------
 #
-CONFIG_HOME="${HOME}/.config"
+ICLOUD_PATH="~/Library/Mobile\ Documents/com\~apple\~CloudDocs"
+CONFIG_PATH="${HOME}/.config"
 #
 # -------------------------------------------- aliases --------------------------------------
 # tool alias
@@ -113,34 +114,31 @@ alias em="emacs"
 alias gsync="git-sync.sh" # git 同步远程仓库（变基拉取 + 提交）
 # mongodbstart
 alias mongodbstart="mongod --config /opt/homebrew/etc/mongod.conf --fork"
+# c & cpp
+alias gcc='gcc-13'
+alias g++='g++-13'
 # python default python3
 alias python="python3"
 alias pip="pip3"
 # 目录跳转
-alias toconfig="cd ~/.config"
+alias tob="cd ${ICLOUD_PATH}/B"
 alias tocellar="cd ~/cellar"
-alias tosd="cd ~/sd"
-alias toicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs"
-alias tod="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/D"
-alias tow="cd ~/W"
+alias toconfig="cd ~/.config"
+alias todev="cd ~/dev"
+alias toicloud="cd ${ICLOUD_PATH}"
 
 # ------------------------------------------- PATH -------------------------------------------
-# go
-export GOPATH=$HOME/sd/go
-# go end
-
-# main
 export PATH=$PATH:/opt/homebrew/bin # homebrew
 export PATH=$PATH:/usr/local/apache-maven-3.9.4/bin # maven
 export PATH=$PATH:/usr/local/mysql/bin # mysql
-export PATH=$PATH:$CONFIG_HOME/_bin # custom bins
+export PATH=$PATH:$CONFIG_PATH/_bin # custom bins
 export PATH=$PATH:$HOME/.emacs.d/bin #  emacs(doom emcas) bins
 export PATH=$PATH:$HOME/.asdf/bin # asdf bins
 export PATH=$PATH:$HOME/.asdf/shims # asdf shims
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/opt/homebrew/opt/llvm/bin
+export GOPATH=$HOME/dev/go # golang
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
-# main end
 
 # pnpm
 export PNPM_HOME="/Users/afzw/Library/pnpm"
@@ -148,4 +146,3 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
