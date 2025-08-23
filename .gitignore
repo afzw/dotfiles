@@ -1,0 +1,28 @@
+**/*.DS_Store
+**/*.log
+emacs/.local/*
+
+
+.mono
+.isolated-storage
+
+filezilla
+Filezilla-server-gui
+
+clash
+configstore
+
+raycast/extensions/*
+cmus/*
+simple-update-notifier
+
+# tmux plugins
+tmux/plugins/*
+
+# doom emacs
+doom/doom
+
+# wireshark
+wireshark/
+
+**/*.rdb
