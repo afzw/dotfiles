@@ -11,5 +11,5 @@ git clone https://github.com/afzw/dotfiles.git ~/dotfiles
 
 cd dotfiles
 
-./bootstrap.sh
+./scripts/bootstrap.sh
 ````
